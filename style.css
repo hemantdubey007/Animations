@@ -1,0 +1,40 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: black;
+}
+
+.container{
+    max-width: 80vw;
+    margin:0 auto;
+    display: flex;
+    justify-content: center;
+    gap:1vw;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0004);
+}
+
+.container:hover .img{
+    opacity:0.3;
+}
+
+.img{
+    width:calc(100% / 3);
+    object-fit: cover;
+    transform: perspective(800px) rotateY(20deg);
+    box-shadow: 0 0 5px 2px gray;
+    transition:transform 500ms linear;
+    border-radius: 5px;
+}
+
+.container .img:hover{
+    opacity: 1;
+    transform: perspective(800px) rotateY(0deg);
+}
